@@ -24,6 +24,7 @@ namespace API.Extensions
                 options.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
             services.AddScoped<IPhotoService, PhotoService>();
+            services.AddScoped<LogUserActivity>();
             return services;
         }
     }
